@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>أفراح آل الدميني — العز بن عبدالسلام الدميني</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=Aref+Ruqaa:wght@400;700&family=Amiri:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --ink:#07090f;
+  --ink2:#0c0f18;
+  --card:#10141f;
+  --card2:#141926;
+  --gold:#c9a25c;
+  --gold2:#f0d9a0;
+  --gold-dim:rgba(201,162,92,.16);
+  --ivory:#f6efe1;
+  --muted:#8d8f9e;
+  --rose:#c9707f;
+  --border:rgba(201,162,92,.18);
+  --green:#25d366;
+}
+body{background:var(--ink);color:var(--ivory);font-family:'Cairo',sans-serif;font-size:16px;line-height:1.8;direction:rtl;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:998;opacity:.2;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E")}
+.font-display{font-family:'Aref Ruqaa',serif}
+.font-ayah{font-family:'Amiri',serif}
+.grad-text{background:linear-gradient(120deg,var(--gold) 0%,var(--gold2) 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+.sr{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.sr.sr-on{opacity:1;transform:translateY(0)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ── TOPBAR ── */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:300;height:54px;display:flex;align-items:center;justify-content:center;
+  background:rgba(7,9,15,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.topbar-mark{display:flex;align-items:center;gap:8px;font-family:'Aref Ruqaa',serif;font-size:1.05rem;color:var(--gold2);letter-spacing:.02em}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 22px 60px;overflow:hidden}
+#hero-dust{position:absolute;inset:0;pointer-events:none;z-index:0}
+.hero-frame{position:absolute;inset:14px;border:1px solid var(--border);pointer-events:none;z-index:1}
+.hero-frame::before,.hero-frame::after{content:'';position:absolute;width:34px;height:34px;border:1px solid var(--gold);opacity:.55}
+.hero-frame::before{top:-1px;right:-1px;border-left:none;border-bottom:none}
+.hero-frame::after{bottom:-1px;left:-1px;border-right:none;border-top:none}
+
+.bismillah{font-size:1.05rem;color:var(--gold2);letter-spacing:.1em;margin-bottom:26px;animation:fadeUp .8s ease both;position:relative;z-index:2}
+.ayah{font-family:'Amiri',serif;font-style:italic;font-size:clamp(1.15rem,3.4vw,1.5rem);color:rgba(246,239,225,.92);max-width:520px;line-height:2.15;margin-bottom:10px;animation:fadeUp .8s .1s ease both;position:relative;z-index:2}
+.ayah-cite{font-size:.75rem;color:var(--muted);margin-bottom:58px;animation:fadeUp .8s .15s ease both;position:relative;z-index:2}
+
+
+.hero-title{font-family:'Aref Ruqaa',serif;font-weight:700;font-size:clamp(2.6rem,9vw,4rem);line-height:1.1;margin-bottom:18px;animation:fadeUp .9s .3s ease both;position:relative;z-index:2}
+.hero-name{font-size:clamp(1.1rem,4vw,1.5rem);font-weight:600;letter-spacing:.02em;color:var(--ivory);margin-bottom:22px;animation:fadeUp .9s .4s ease both;position:relative;z-index:2}
+.hero-sub{font-size:.95rem;color:var(--muted);max-width:340px;line-height:1.9;margin-bottom:44px;animation:fadeUp .9s .5s ease both;position:relative;z-index:2}
+
+.scroll-cue{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--gold2);font-size:.78rem;animation:fadeUp .9s .6s ease both;position:relative;z-index:2;cursor:pointer;text-decoration:none}
+.scroll-cue svg{width:16px;height:16px;animation:bounce 2s ease-in-out infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* ── SECTIONS shared ── */
+.sec{position:relative;z-index:1;padding:70px 22px;max-width:520px;margin:0 auto}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;justify-content:center;gap:8px}
+.eyebrow::before,.eyebrow::after{content:'';width:18px;height:1px;background:var(--gold);opacity:.6}
+.sec-title{font-family:'Aref Ruqaa',serif;font-weight:700;font-size:clamp(1.6rem,5vw,2.1rem);text-align:center;margin-bottom:14px;color:#fff}
+.sec-sub{text-align:center;color:var(--muted);font-size:.9rem;line-height:1.8;max-width:380px;margin:0 auto 36px}
+
+/* ── FORM CARD ── */
+.form-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:32px 26px;text-align:center;position:relative;overflow:hidden}
+.form-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,var(--gold-dim),transparent 60%);pointer-events:none}
+.form-label{font-size:.9rem;color:var(--ivory);margin-bottom:14px;position:relative;z-index:1}
+.name-input{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:10px;padding:15px 16px;color:var(--ivory);font-family:'Cairo',sans-serif;font-size:1rem;text-align:center;outline:none;transition:border-color .2s;margin-bottom:16px;position:relative;z-index:1}
+.name-input::placeholder{color:var(--muted)}
+.name-input:focus{border-color:rgba(201,162,92,.55)}
+.gen-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(120deg,var(--gold),var(--gold2));color:#07090f;border:none;padding:15px 36px;border-radius:10px;font-family:'Cairo',sans-serif;font-weight:800;font-size:.95rem;cursor:pointer;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s;box-shadow:0 0 26px rgba(201,162,92,.28);position:relative;z-index:1}
+.gen-btn:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(201,162,92,.45)}
+.gen-btn:active{transform:translateY(0) scale(.98)}
+.form-note{font-size:.76rem;color:var(--muted);margin-top:16px;position:relative;z-index:1}
+.form-error{font-size:.82rem;color:var(--rose);margin-top:10px;display:none;position:relative;z-index:1}
+
+/* ── REVEAL ── */
+#reveal-section{display:none}
+.flash{position:fixed;inset:0;pointer-events:none;z-index:400;background:radial-gradient(circle at 50% 40%,rgba(240,217,160,.9),transparent 60%);opacity:0}
+.flash.go{animation:flashGo .7s ease-out forwards}
+@keyframes flashGo{0%{opacity:0}25%{opacity:.85}100%{opacity:0}}
+
+
+.reveal-card{background:linear-gradient(165deg,var(--card2),var(--card));border:1px solid rgba(201,162,92,.35);border-radius:20px;padding:38px 28px;text-align:center;position:relative;overflow:hidden;animation:fadeUp .7s .1s ease both;margin-top:8px}
+.reveal-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% -10%,rgba(201,162,92,.18),transparent 55%);pointer-events:none}
+.reveal-eyebrow{font-size:.78rem;color:var(--gold2);margin-bottom:18px;position:relative;z-index:1}
+.reveal-text{font-family:'Aref Ruqaa',serif;font-size:clamp(1.2rem,4.5vw,1.5rem);line-height:2.05;color:var(--ivory);white-space:pre-line;position:relative;z-index:1}
+.reveal-text .hl{color:var(--gold2);font-weight:700}
+
+.share-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px}
+.share-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-family:'Cairo',sans-serif;font-weight:700;font-size:.85rem;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--ivory);transition:all .2s;text-decoration:none}
+.share-btn svg{width:16px;height:16px}
+.share-btn.wa{background:var(--green);border-color:var(--green);color:#fff}
+.share-btn.wa:hover{opacity:.88}
+.share-btn:not(.wa):hover{border-color:rgba(201,162,92,.5);background:rgba(201,162,92,.08)}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--card2);border:1px solid var(--border);color:var(--ivory);padding:12px 22px;border-radius:100px;font-size:.85rem;opacity:0;transition:opacity .3s,transform .3s;z-index:500;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+.regen-link{display:inline-flex;align-items:center;gap:6px;margin-top:24px;color:var(--muted);font-size:.82rem;cursor:pointer;text-decoration:none;transition:color .2s}
+.regen-link:hover{color:var(--gold2)}
+
+/* ── SIGNATURE ── */
+.signature-sec{text-align:center;padding:50px 22px}
+.signature-line{font-size:.88rem;color:var(--muted);line-height:1.9;max-width:340px;margin:0 auto 16px}
+.signature-line b{color:var(--ivory);font-weight:600}
+.partner-mark{display:inline-flex;align-items:center;gap:8px;margin-top:6px;text-decoration:none;transition:opacity .2s,transform .2s}
+.partner-mark:hover{opacity:.8;transform:translateY(-1px)}
+.partner-mark .hex{width:24px;height:24px}
+.partner-mark span{font-family:'Aref Ruqaa',serif;font-size:1.05rem;color:var(--gold2)}
+.portfolio-link{display:inline-flex;align-items:center;gap:6px;margin-top:18px;color:var(--gold2);font-size:.85rem;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(201,162,92,.4);padding-bottom:2px;transition:opacity .2s}
+.portfolio-link:hover{opacity:.75}
+.svc-link{display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,92,.08);border:1px solid rgba(201,162,92,.3);border-radius:100px;padding:9px 20px;text-decoration:none;color:var(--gold2);font-family:'Aref Ruqaa',serif;font-size:.95rem;transition:all .2s}
+.svc-link:hover{background:rgba(201,162,92,.16);transform:translateY(-1px)}
+
+/* ── GIFT ── */
+.gift-card{background:linear-gradient(135deg,rgba(201,162,92,.1),rgba(201,162,92,.03));border:1px solid rgba(201,162,92,.3);border-radius:18px;padding:34px 26px;text-align:center}
+.gift-icon{font-size:1.8rem;margin-bottom:14px}
+.gift-card h3{font-family:'Cairo',sans-serif;font-weight:800;font-size:1.2rem;color:#fff;margin-bottom:10px}
+.gift-card p{font-size:.88rem;color:var(--muted);line-height:1.85;max-width:340px;margin:0 auto 22px}
+.gift-card .gift-btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#07090f;padding:13px 28px;border-radius:10px;font-weight:800;font-size:.88rem;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 0 24px rgba(201,162,92,.3)}
+.gift-card .gift-btn:hover{transform:translateY(-2px);box-shadow:0 0 36px rgba(201,162,92,.5)}
+
+/* ── SERVICES ── */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.svc-cell{background:var(--card);padding:22px 16px;text-align:center}
+.svc-cell .ico{font-size:1.4rem;margin-bottom:8px}
+.svc-cell h4{font-size:.82rem;font-weight:700;color:#fff;margin-bottom:4px}
+.svc-cell p{font-size:.72rem;color:var(--muted);line-height:1.6}
+
+/* ── CONTACT ── */
+.contact-row{display:flex;flex-direction:column;gap:12px}
+.contact-btn{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
+.contact-btn:hover{border-color:rgba(201,162,92,.4);transform:translateX(-3px)}
+.contact-btn .ico{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0}
+.contact-btn .ico.wa{background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.25)}
+.contact-btn .ico.em{background:rgba(201,162,92,.12);border:1px solid rgba(201,162,92,.25)}
+.contact-btn h5{font-size:.9rem;font-weight:700;color:#fff;margin-bottom:2px}
+.contact-btn p{font-size:.78rem;color:var(--muted)}
+
+/* ── FOOTER ── */
+footer{text-align:center;padding:40px 22px 50px;border-top:1px solid var(--border)}
+footer p{font-size:.78rem;color:var(--muted);margin-bottom:6px}
+footer .mark{font-family:'Aref Ruqaa',serif;color:var(--gold2);font-size:1.1rem}
+.footer-mark{display:inline-flex;align-items:center;gap:8px;margin-bottom:10px}
+.footer-mark .hex{width:26px;height:26px}
+
+@media(min-width:700px){
+  .sec{max-width:640px;padding:90px 32px}
+  .svc-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-sub{max-width:420px}
+}
+</style>
+</head>
+<body>
+
+<div class="flash" id="flash"></div>
+<div class="toast" id="toast"></div>
+
+<div class="topbar">
+  <div class="topbar-mark">
+    <svg viewBox="0 0 36 36" width="20" height="20"><polygon points="18,2 34,18 18,34 2,18" fill="none" stroke="#c9a25c" stroke-width="1.5"/><polygon points="18,5 31,18 18,31 5,18" fill="#c9a25c" opacity="0.15"/></svg>
+    أفراح آل الدميني
+  </div>
+</div>
+
+<!-- ══════ HERO ══════ -->
+<section class="hero" id="hero">
+  <canvas id="hero-dust"></canvas>
+  <div class="hero-frame"></div>
+
+  <div class="bismillah">بِسْمِ اللهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  <p class="ayah">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+  <div class="ayah-cite">— سورة الروم، الآية 21</div>
+
+  <h1 class="hero-title grad-text">أفراح آل الدميني</h1>
+  <a href="#blessing-form" class="scroll-cue">
+    اضغط هنا للبدء
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+  </a>
+</section>
+
+<!-- ══════ ABOUT GROOM ══════ -->
+<section class="sec">
+  <div class="eyebrow sr">تعريف بسيط</div>
+  <h2 class="sec-title sr">عن العريس</h2>
+  <p class="sec-sub sr" style="margin-bottom:0">أنا العز بن عبد السلام الدميني، مهندس ذكاء اصطناعي ومؤسس سُريا AI، المتخصصة في حلول الذكاء الاصطناعي للشركات والأفراد.<br>حبيت هذي الصفحة تكون أول تعريف بسيط بيني وبينكم 🤍</p>
+</section>
+
+<!-- ══════ NAME FORM ══════ -->
+<section class="sec" id="blessing-form">
+  <div class="eyebrow sr">تجربة ذكية</div>
+  <h2 class="sec-title sr">كلمات خُصّصت لك وحدك</h2>
+  <p class="sec-sub sr">كل ضيف يحصل على كلمات مختلفة عن غيره — اكتب اسمك وشاهد</p>
+
+  <div class="form-card sr">
+    <div class="form-label">اسمك الكريم</div>
+    <input type="text" id="guest-name" class="name-input" placeholder="مثال: محمد العمري" maxlength="40">
+    <div class="form-error" id="form-error">اكتب اسمك أولاً عشان نولّد تهنئتك 🤍</div>
+    <br>
+    <button class="gen-btn" id="gen-btn">✨ ولّد تهنئتي</button>
+    <p class="form-note">تهنئتك ستكون مختلفة عن غيرك من الحضور</p>
+  </div>
+</section>
+
+<!-- ══════ REVEAL ══════ -->
+<section class="sec" id="reveal-section">
+  <div class="reveal-card">
+    <div class="reveal-eyebrow" id="reveal-eyebrow">من قلب الفرح إلى ضيفنا الغالي</div>
+    <div class="reveal-text" id="reveal-text"></div>
+  </div>
+
+  <div class="share-row">
+    <a href="#" target="_blank" class="share-btn wa" id="share-wa">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.78-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.7.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.42.24-.69.24-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12 0C5.37 0 0 5.37 0 12c0 2.14.56 4.14 1.55 5.88L.06 23.94l6.2-1.49A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12S18.63 0 12 0zm0 21.82a9.79 9.79 0 01-5.03-1.39l-.36-.21-3.68.88.93-3.58-.24-.38A9.82 9.82 0 012.18 12c0-5.42 4.4-9.82 9.82-9.82 5.42 0 9.82 4.4 9.82 9.82 0 5.42-4.4 9.82-9.82 9.82z"/></svg>
+      شارك على واتساب
+    </a>
+    <button class="share-btn" id="save-img">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+      احفظها كصورة
+    </button>
+    <button class="share-btn" id="copy-text">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      نسخ النص
+    </button>
+  </div>
+
+  <div style="text-align:center">
+    <a class="regen-link" id="regen-link">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+      ولّد تهنئة لشخص ثاني
+    </a>
+  </div>
+</section>
+
+<!-- ══════ SIGNATURE ══════ -->
+<section class="signature-sec sr">
+  <p class="signature-line">هدية رقمية من العريس <b>مهندس الذكاء الاصطناعي | العز بن عبد السلام الدميني</b><br>بالشراكة مع</p>
+  <a href="https://aalezz.github.io/suraya-ai/#talk-suraya" target="_blank" class="partner-mark" aria-label="زيارة موقع سُريا AI">
+    <svg class="hex" viewBox="0 0 36 36"><polygon points="18,2 34,18 18,34 2,18" fill="none" stroke="#c9a25c" stroke-width="1.5"/><polygon points="18,5 31,18 18,31 5,18" fill="#c9a25c" opacity="0.18"/></svg>
+    <span>سُريا AI</span>
+  </a>
+</section>
+
+<!-- ══════ GIFT ══════ -->
+<section class="sec">
+  <div class="gift-card sr">
+    <div class="gift-icon">🎁</div>
+    <h3>هدية خاصة لضيوف هذا الفرح</h3>
+    <p>سواء كانت عندك عيادة تستقبل المرضى، متجر، أو فكرة تقنية تنتظر من يطلقها — سُريا AI تهديك استشارة مجانية وخصم 25% على أول مشروع، يساعدك تبدأ بثقة.</p>
+    <a href="https://wa.me/966564124426?text=السلام%20عليكم%2C%20شفت%20هدية%20الفرح%20وحاب%20أعرف%20أكثر%20عن%20استشارة%20سُريا%20AI" target="_blank" class="gift-btn">احصل على هديتك عبر واتساب</a>
+  </div>
+</section>
+
+<!-- ══════ SERVICES ══════ -->
+<section class="sec">
+  <div class="eyebrow sr">من أعمالنا</div>
+  <h2 class="sec-title sr">ذكاء اصطناعي يشتغل بدالك</h2>
+  <p class="sec-sub sr">من عيادتك إلى متجرك إلى مشروعك القادم — فيه حل مصمم على مقاسك</p>
+  <div style="text-align:center;margin-bottom:32px">
+    <a href="https://aalezz.github.io/suraya-ai/#talk-suraya" target="_blank" class="svc-link" aria-label="زيارة موقع سُريا AI">
+      <svg viewBox="0 0 36 36" width="20" height="20"><polygon points="18,2 34,18 18,34 2,18" fill="none" stroke="#c9a25c" stroke-width="1.5"/><polygon points="18,5 31,18 18,31 5,18" fill="#c9a25c" opacity="0.18"/></svg>
+      <span>سُريا AI</span>
+    </a>
+  </div>
+  <div class="svc-grid sr">
+    <div class="svc-cell"><div class="ico">🩺</div><h4>عيادتك تستقبل حتى وأنت نايم</h4><p>مساعد ذكي يرد على مرضاك ويحجز لهم ويذكّرهم بالموعد</p></div>
+    <div class="svc-cell"><div class="ico">🎨</div><h4>حضور رقمي يليق بك</h4><p>موقع أو هوية تعكس مستوى عملك</p></div>
+    <div class="svc-cell"><div class="ico">⚡</div><h4>وقتك أغلى من الروتين</h4><p>أتمتة تتولى عنك التفاصيل المتكررة</p></div>
+    <div class="svc-cell"><div class="ico">🧠</div><h4>حلول على مقاس عملك</h4><p>أنظمة ذكاء اصطناعي مبنية لاحتياجك بالضبط</p></div>
+    <div class="svc-cell"><div class="ico">📊</div><h4>بياناتك تتكلم، ونسمعها لك</h4><p>تقارير ورؤى تساعدك تقرر بثقة</p></div>
+    <div class="svc-cell"><div class="ico">💬</div><h4>عملاؤك يشعرون بالاهتمام</h4><p>مساعدات ذكية بلمسة إنسانية</p></div>
+  </div>
+</section>
+
+<!-- ══════ CONTACT ══════ -->
+<section class="sec">
+  <div class="eyebrow sr">تواصل</div>
+  <h2 class="sec-title sr">خلنا نسمع فكرتك</h2>
+  <div class="contact-row sr">
+    <a href="https://wa.me/966564124426" target="_blank" class="contact-btn">
+      <div class="ico wa">💬</div>
+      <div><h5>واتساب</h5><p>تواصل فوري — نرد خلال دقائق</p></div>
+    </a>
+    <a href="mailto:alezz.aldumaini@gmail.com" class="contact-btn">
+      <div class="ico em">📧</div>
+      <div><h5>البريد الإلكتروني</h5><p>راسلنا مباشرة</p></div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-mark">
+    <svg class="hex" viewBox="0 0 36 36"><polygon points="18,2 34,18 18,34 2,18" fill="none" stroke="#c9a25c" stroke-width="1.5"/><polygon points="18,5 31,18 18,31 5,18" fill="#c9a25c" opacity="0.18"/></svg>
+    <span class="mark">سُريا AI</span>
+  </div>
+  <p>بمحبة لضيوف هذا الفرح 🤍</p>
+</footer>
+
+<script>
+const WHATSAPP = '966564124426';
+
+const OPENINGS = [
+  "يا {name}،",
+  "{name} الغالي،",
+  "أهلاً وسهلاً بك يا {name}،",
+  "حضورك زانه يا {name}،",
+  "{name}، يا من شرّفنا بحضوره،",
+  "تحية خاصة لك يا {name}،",
+  "{name}، يا أغلى من حضر،"
+];
+
+const MIDDLES = [
+  "حضورك زيّن فرحتنا وزاد البهجة في قلوبنا.\nبارك الله للعروسين، وجمع بينهما على خير وسعادة، ورزقهما الذرية الصالحة.",
+  "يسعدنا حضورك في هذا اليوم المبارك.\nنسأل الله أن يديم على العروسين المحبة والوئام، ويجعل بيتهما عامراً بالخير والبركة.",
+  "فرحتنا ما اكتملت إلا بحضورك.\nاللهم بارك لهما، واجمع شملهما على طاعتك، واملأ حياتهما بالسكينة والمودة.",
+  "كل من حضر اليوم له بصمة في هذا الفرح، وبصمتك من أجملها.\nبارك الله لهما وبارك عليهما، وأدام عليهما نعمة الحب والرضا.",
+  "شرّفتنا بحضورك في يوم لا يُنسى.\nنسأل الله أن يرزق العروسين القبول والسعادة وسعة الرزق وحسن الأخلاق.",
+  "امتناننا لك عظيم على وقتك ومشاركتنا فرحتنا.\nبارك الله للزوجين في زواجهما، وألّف بين قلبيهما، وجعل حياتهما مليئة بالخير.",
+  "وجودك أضاف لهذا اليوم رونقاً خاصاً.\nنسأل الله أن يكتب لهما التوفيق والسعادة في كل خطوة من حياتهما."
+];
+
+const CLOSINGS = [
+  "شكراً لك من القلب على تشريفك 🤍",
+  "امتناننا لك لا حدود له 🌙",
+  "لك منا كل التقدير والمحبة 🤍",
+  "دمت بخير وسعادة دائمة ✨",
+  "محبتنا لك خالصة 🤍",
+  "نسأل الله أن يجمعنا دائماً على الأفراح 🌙"
+];
+
+let lastKey = '';
+function pickBlessing(name){
+  let oi, mi, ci, key;
+  do {
+    oi = Math.floor(Math.random()*OPENINGS.length);
+    mi = Math.floor(Math.random()*MIDDLES.length);
+    ci = Math.floor(Math.random()*CLOSINGS.length);
+    key = oi+'-'+mi+'-'+ci;
+  } while(key===lastKey);
+  lastKey = key;
+  const text = OPENINGS[oi].replace(/\{name\}/g, name) + '\n' + MIDDLES[mi] + '\n' + CLOSINGS[ci];
+  return text;
+}
+
+function highlightName(text, name){
+  const esc = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return text.replace(new RegExp(esc, 'g'), '<span class="hl">'+name+'</span>');
+}
+
+let currentName = '';
+let currentBlessingPlain = '';
+
+function generateBlessing(){
+  const input = document.getElementById('guest-name');
+  const errorEl = document.getElementById('form-error');
+  const name = input.value.trim();
+  if(!name){
+    errorEl.style.display = 'block';
+    input.focus();
+    return;
+  }
+  errorEl.style.display = 'none';
+  currentName = name;
+  currentBlessingPlain = pickBlessing(name);
+
+  const flash = document.getElementById('flash');
+  flash.classList.remove('go');
+  void flash.offsetWidth;
+  flash.classList.add('go');
+
+  document.getElementById('blessing-form').style.display = 'none';
+
+  const revealSection = document.getElementById('reveal-section');
+  revealSection.style.display = 'block';
+  document.getElementById('reveal-eyebrow').textContent = 'من قلب الفرح إلى ' + name;
+  document.getElementById('reveal-text').innerHTML = highlightName(currentBlessingPlain, name);
+
+  const waText = encodeURIComponent(currentBlessingPlain + '\n\n💌 احصل على كلماتك الخاصة من هنا:\n' + window.location.href);
+  document.getElementById('share-wa').href = 'https://wa.me/?text=' + waText;
+
+  setTimeout(()=>{ revealSection.scrollIntoView({behavior:'smooth', block:'start'}); }, 150);
+}
+
+document.getElementById('gen-btn').addEventListener('click', generateBlessing);
+document.getElementById('guest-name').addEventListener('keydown', e => { if(e.key==='Enter') generateBlessing(); });
+
+document.getElementById('regen-link').addEventListener('click', () => {
+  document.getElementById('reveal-section').style.display = 'none';
+  document.getElementById('blessing-form').style.display = 'block';
+  document.getElementById('guest-name').value = '';
+  document.getElementById('blessing-form').scrollIntoView({behavior:'smooth', block:'start'});
+});
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=> t.classList.remove('show'), 2200);
+}
+
+document.getElementById('copy-text').addEventListener('click', async () => {
+  try{
+    await navigator.clipboard.writeText(currentBlessingPlain);
+    showToast('تم نسخ التهنئة 🤍');
+  }catch(e){
+    showToast('تعذّر النسخ، انسخها يدوياً');
+  }
+});
+
+document.getElementById('save-img').addEventListener('click', () => {
+  const W = 1080, H = 1350;
+  const canvas = document.createElement('canvas');
+  canvas.width = W; canvas.height = H;
+  const ctx = canvas.getContext('2d');
+
+  const grad = ctx.createLinearGradient(0,0,0,H);
+  grad.addColorStop(0, '#0c0f18');
+  grad.addColorStop(1, '#07090f');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0,0,W,H);
+
+  ctx.strokeStyle = 'rgba(201,162,92,.5)';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(40,40,W-80,H-80);
+
+  ctx.direction = 'rtl';
+  ctx.textAlign = 'center';
+
+  ctx.fillStyle = '#f0d9a0';
+  ctx.font = '600 32px Cairo, sans-serif';
+  ctx.fillText('أفراح آل الدميني', W/2, 150);
+
+  ctx.fillStyle = '#8d8f9e';
+  ctx.font = '400 24px Cairo, sans-serif';
+  ctx.fillText('العز بن عبدالسلام الدميني', W/2, 195);
+
+  ctx.strokeStyle = 'rgba(201,162,92,.5)';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(W/2-60, 240); ctx.lineTo(W/2+60, 240);
+  ctx.stroke();
+
+  ctx.fillStyle = '#f6efe1';
+  ctx.font = '700 38px Cairo, sans-serif';
+  const lines = currentBlessingPlain.split('\n');
+  let y = 320;
+  const lineHeight = 58;
+  const maxWidth = W - 160;
+
+  function wrapAndDraw(line, startY){
+    const words = line.split(' ');
+    let current = '';
+    let yy = startY;
+    for(let i=0;i<words.length;i++){
+      const test = current ? current + ' ' + words[i] : words[i];
+      if(ctx.measureText(test).width > maxWidth && current){
+        ctx.fillText(current, W/2, yy);
+        current = words[i];
+        yy += lineHeight;
+      } else {
+        current = test;
+      }
+    }
+    if(current) { ctx.fillText(current, W/2, yy); yy += lineHeight; }
+    return yy;
+  }
+
+  lines.forEach(line => {
+    if(line.trim()===''){ y += lineHeight*0.5; return; }
+    y = wrapAndDraw(line, y) ;
+  });
+
+  ctx.fillStyle = '#8d8f9e';
+  ctx.font = '400 22px Cairo, sans-serif';
+  ctx.fillText('هدية رقمية بالشراكة مع سُريا AI', W/2, H-90);
+
+  const link = document.createElement('a');
+  link.download = 'تهنئة-' + (currentName||'ضيف') + '.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+  showToast('تم حفظ الصورة 🤍');
+});
+
+const srObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('sr-on'); srObs.unobserve(e.target); } });
+}, {threshold:.12, rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.sr').forEach(el => srObs.observe(el));
+setTimeout(()=>{ document.querySelectorAll('.sr:not(.sr-on)').forEach(el=>el.classList.add('sr-on')); }, 1200);
+
+(function(){
+  const canvas = document.getElementById('hero-dust');
+  const hero = document.getElementById('hero');
+  const ctx = canvas.getContext('2d');
+  let W, H, pts = [];
+  function resize(){ W = canvas.width = hero.offsetWidth; H = canvas.height = hero.offsetHeight; }
+  resize(); window.addEventListener('resize', resize);
+  const mk = () => ({x:Math.random()*W, y:Math.random()*H, r:Math.random()*1.3+.3, vx:(Math.random()-.5)*.12, vy:Math.random()*.18+.04, a:Math.random()*.4+.08});
+  for(let i=0;i<46;i++) pts.push(mk());
+  function tick(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if(p.y > H+4){ Object.assign(p, mk(), {y:-4}); }
+      if(p.x < -4) p.x = W+4; if(p.x > W+4) p.x = -4;
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.fillStyle = `rgba(201,162,92,${p.a})`; ctx.fill();
+    });
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+</script>
+
+</body>
+</html>
